@@ -10,6 +10,7 @@ $(".search-form").submit(function (evt) {
 });
 
 function displayAlbums(data) {
+    // Reset the album list
     $(".album-list li").remove()
     $(".no-albums").remove();
 
