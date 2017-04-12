@@ -13,6 +13,7 @@ $(".search-form").submit(function (evt) {
 function displayAlbums(data) {
     $(".desc").hide();
     $(".no-albums").remove();
+    $(".album-list li").remove()
 
     if (data.albums.items.length === 0) {
         displayNoAlbumsFound();
@@ -28,7 +29,7 @@ function displayAlbum(album) {
 
     const $album = $(`<li>
             <div class="album-wrap">
-              <img class="album-art" src="https://i.scdn.co/image/23837f31d4791981db85588e57a86cf2ce5b88e3">
+              <img class="album-art" src="${album.images[0].url}">
             </div>
             <span class="album-title">${album.name}</span>
             <span class="album-artist">${album.artists[0].name}</span>
