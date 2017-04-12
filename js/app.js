@@ -4,13 +4,14 @@ $(".search-form").submit(function (evt) {
     evt.preventDefault();
 
     const query = $("#search").val();
+
+    // Send AJAX Album Search Request to Spotify API
     $.getJSON(`https://api.spotify.com/v1/search?q=${query}&type=album`, displayAlbums);
 });
 
 function displayAlbums(data) {
-    $(".desc").hide();
-    $(".no-albums").remove();
     $(".album-list li").remove()
+    $(".no-albums").remove();
 
     if (data.albums.items.length === 0) {
         displayNoAlbumsFound();
