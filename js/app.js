@@ -1,8 +1,5 @@
 "use strict";
 
-//$(".album-list").hide();
-
-
 $(".search-form").submit(function (evt) {
     evt.preventDefault();
 
@@ -25,8 +22,6 @@ function displayAlbums(data) {
 }
 
 function displayAlbum(album) {
-    console.log(album.artists)
-
     const $album = $(`<li>
             <div class="album-wrap">
               <img class="album-art" src="${album.images[0].url}">
