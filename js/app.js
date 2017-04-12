@@ -35,7 +35,6 @@ function displayAlbum(album) {
 }
 
 function displayNoAlbumsFound() {
-
     const query = $("#search").val();
     const $noAlbumFound = $(`<li class='no-albums'>
             <i class='material-icons icon-help'>help_outline</i>No albums found that match: ${query}.
