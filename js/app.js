@@ -10,9 +10,7 @@ $(".search-form").submit(function (evt) {
 });
 
 function displayAlbums(data) {
-    // Reset the album list
-    $(".album-list li").remove()
-    $(".no-albums").remove();
+    resetAlbumList();
 
     if (data.albums.items.length === 0) {
         displayNoAlbumsFound();
@@ -21,6 +19,11 @@ function displayAlbums(data) {
             displayAlbum(album);
         });
     }
+}
+
+function resetAlbumList() {
+    $(".album-list li").remove()
+    $(".no-albums").remove();
 }
 
 function displayAlbum(album) {
