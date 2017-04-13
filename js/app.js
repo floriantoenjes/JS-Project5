@@ -22,7 +22,7 @@ function displayAlbums(data) {
 }
 
 function resetAlbumList() {
-    $(".album-list li").remove()
+    $(".album-list li").remove();
     $(".no-albums").remove();
 }
 
@@ -35,7 +35,7 @@ function displayAlbum(album) {
             <span class="album-artist">${album.artists[0].name}</span>
           </li>`);
 
-    $(".album-list").append($album)
+    $(".album-list").append($album);
 }
 
 function displayNoAlbumsFound() {
@@ -44,5 +44,5 @@ function displayNoAlbumsFound() {
             <i class='material-icons icon-help'>help_outline</i>No albums found that match: ${query}.
           </li>`);
 
-    $(".main-content").append($noAlbumFound)
+    $(".main-content").append($noAlbumFound);
 }
